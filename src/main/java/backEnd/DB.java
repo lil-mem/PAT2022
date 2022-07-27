@@ -19,8 +19,8 @@ import java.sql.SQLException;
 public class DB {
 
 	private static final String driver = "com.mysql.cj.jdbc.Driver";
-	private static final String url = "jdbc:mysql://localhost:3306/pat";
-	private static final String username = "root";
+	private static final String url = "jdbc:mysql://102.130.115.69:3306/muhammedmDB";
+	private static final String username = "muhammedm";
 	private static final String password = "Reddam2021";
 
 	private PreparedStatement statement;
