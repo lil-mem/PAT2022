@@ -52,7 +52,7 @@ public class SalesManager
     public void addToSalesDB(String stockName,int stockAmount,int stockPrice,String customerName) throws SQLException, ClassNotFoundException
     {
         DB d = new DB();
-        String query = "INSERT INTO pat.tblsales (`stockName`,`stockAmount`,`stockPrice`,`customerName`) \n" +
+        String query = "INSERT INTO tblsales (`stockName`,`stockAmount`,`stockPrice`,`customerName`) \n" +
         "VALUES ('" + stockName + "' , " + " " + stockAmount +" ," + stockPrice + " , " + " '" + customerName + "')";
         System.out.println(query);
         d.update(query);

@@ -81,7 +81,7 @@ public class StockManager
     public void addToStockDB(String name,String category,int price) throws SQLException, ClassNotFoundException
     {
         DB d = new DB();
-        String query = "INSERT INTO pat.tblstock (`stockName`,`category`,`stockPrice`) \n" +
+        String query = "INSERT INTO tblstock (`stockName`,`category`,`stockPrice`) \n" +
         "VALUES ('" + name + "' , " + " '" + category +"' ," + price + ");";
         System.out.println(query);
         d.update(query);
@@ -92,7 +92,7 @@ public class StockManager
     public void deleteFromDB(int stockID) throws ClassNotFoundException, SQLException
     {
         DB d = new DB();
-        String query = "DELETE FROM pat.tblstock WHERE `stockID` = " + stockID + ";";
+        String query = "DELETE FROM tblstock WHERE `stockID` = " + stockID + ";";
         d.update(query);
     }
     

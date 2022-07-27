@@ -67,7 +67,7 @@ public class CustomerManager
             public void addNewCustomer(String customerName,int amountOwed) throws SQLException, ClassNotFoundException
                 {
                     DB d = new DB();
-                    String query = "INSERT INTO pat.tblcustomer (`customerName`, `amountOwed`) \n" +
+                    String query = "INSERT INTO tblcustomer (`customerName`, `amountOwed`) \n" +
             "	VALUES ('" + customerName + "' , " + amountOwed + ");";
                     System.out.println(query);
                     d.update(query);
@@ -77,7 +77,7 @@ public class CustomerManager
             public void deleteFromCustomerDB(int customerID) throws ClassNotFoundException, SQLException
                 {
                     DB d = new DB();
-                    String query = "DELETE FROM pat.tblcustomer WHERE `customerID` = " + customerID + ";";
+                    String query = "DELETE FROM tblcustomer WHERE `customerID` = " + customerID + ";";
                     d.update(query);
                 }
 }

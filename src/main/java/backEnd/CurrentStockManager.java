@@ -46,7 +46,7 @@ public class CurrentStockManager
     public void addToCurrentStock(int quantity) throws ClassNotFoundException, SQLException
     {
         DB d = new DB();
-        String query = "INSERT INTO pat.tblcurrentstock (`quantity`) \n" +
+        String query = "INSERT INTO tblcurrentstock (`quantity`) \n" +
         "VALUES (" + quantity + ");";
         System.out.println(query);
         d.update(query);
@@ -58,7 +58,7 @@ public class CurrentStockManager
     public void deleteFromDB(int stockID) throws ClassNotFoundException, SQLException
     {
         DB d = new DB();    
-        String query = "DELETE FROM pat.tblcurrentstock WHERE `stockID` = " + stockID + ";";
+        String query = "DELETE FROM tblcurrentstock WHERE `stockID` = " + stockID + ";";
         d.update(query);
     }
 }

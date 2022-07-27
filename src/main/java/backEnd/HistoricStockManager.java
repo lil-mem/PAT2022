@@ -44,7 +44,7 @@ public class HistoricStockManager
     public void addToHistoricStock(int quantity) throws ClassNotFoundException, SQLException
     {
         DB d = new DB();
-        String query = "INSERT INTO pat.tblhistoricStock (`quantity`) \n" +
+        String query = "INSERT INTO tblhistoricStock (`quantity`) \n" +
         "VALUES (" + quantity + ");";
         System.out.println(query);
         d.update(query);
@@ -56,7 +56,7 @@ public class HistoricStockManager
     public void deleteFromHistoricStock(int stockID) throws ClassNotFoundException, SQLException
     {
         DB d = new DB();    
-        String query = "DELETE FROM pat.tblhistoricstock WHERE `stockID` = " + stockID + ";";
+        String query = "DELETE FROM tblhistoricstock WHERE `stockID` = " + stockID + ";";
         d.update(query);
     }
     
